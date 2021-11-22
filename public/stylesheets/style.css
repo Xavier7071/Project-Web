@@ -1,0 +1,26 @@
+body {
+    color: #fff;
+    font-size: 100%;
+}
+
+.headerImg {
+    height: 90vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#headerHome {
+    background-image: url('https://cdn.shopify.com/s/files/1/2059/8303/t/23/assets/e07d2c14ad31--MenSection-HeaderLanding-FA21.jpg?v=1629214662');
+}
+
+#headerProducts {
+    background-image: url("https://cdn.shopify.com/s/files/1/2059/8303/t/23/assets/eb0401ed984e--WomenSection-HeaderLanding-FA21.jpg?v=1629215809");
+}
+
+.headerTitle h1 {
+    font-family: Anton, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 8vw;
+}

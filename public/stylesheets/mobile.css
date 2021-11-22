@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+    .title h2 {
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+    .carousel {
+        height: 75%;
+        width: 75%;
+    }
+
+    .product-image {
+        width: 75%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .title {
+        width: 65%;
+    }
+
+    .title h2 {
+        font-size: 15px;
+    }
+}

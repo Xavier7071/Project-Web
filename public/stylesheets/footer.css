@@ -1,0 +1,61 @@
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 20px auto auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+hr {
+    border-top-color: #bbb;
+    opacity: .5;
+}
+
+h6 {
+    color: #fff;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+footer .social-icons {
+    margin-right: 15px;
+}
+
+.social-icons {
+    padding-left: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.social-icons a {
+    background-color: #33353d;
+    border-radius: 100%;
+    color: #818a91;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    text-align: center;
+    width: 40px;
+}
+
+.social-icons a:hover {
+    color: rgba(255, 255, 255, .75);
+}
+
+footer img {
+    height: 65px;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.footer-text {
+    opacity: .5;
+}

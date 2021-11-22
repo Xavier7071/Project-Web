@@ -1,0 +1,37 @@
+.card {
+    border-style: none;
+    margin: 25px auto;
+    width: 90%;
+}
+
+.item {
+    background-color: #404060;
+    border-color: #000;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 4px;
+    box-shadow: 0 0 10px #000;
+    padding: 30px 20px;
+}
+
+.product-image {
+    border-radius: 50px;
+    display: block;
+    margin: 20px auto;
+    width: 75%;
+    height: 20vw;
+}
+
+.carousel .product-image {
+    width: 50%;
+}
+
+.item-container .row {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-light:hover {
+    background-color: #f8da1c;
+    color: #000000;
+}

@@ -1,0 +1,49 @@
+#navbarNav {
+    font-size: 15px;
+    justify-content: center;
+}
+
+.navbar-brand img {
+    height: 55px;
+    width: 120px;
+}
+
+.nav-item img {
+    height: 35px;
+    width: 70px;
+}
+
+.nav-item {
+    margin-right: 50px;
+}
+
+.nav-item:hover {
+    background-color: #f8da1c;
+}
+
+.navText,
+.navbar-dark .navbar-nav .nav-link {
+    font-family: Suisse Bold, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    color: #000;
+}
+
+.navbar-toggler-icon {
+    background-image: url(../images/hamburgerButton.png) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+nav {
+    background-color: #ffffff;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.fas {
+    margin-right: 5px;
+}
