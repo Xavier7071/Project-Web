@@ -19,6 +19,17 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .shopping-cart {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .btn-purchase {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 410px) {
     .title {
         width: 65%;

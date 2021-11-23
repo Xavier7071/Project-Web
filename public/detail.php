@@ -34,7 +34,7 @@ if (!$result) {
     <script type="module" src="scripts/app.js?<?php echo time(); ?>"></script>
 </head>
 
-<body class="imgBody" id="detailImg">
+<body class="img-body" id="detail-body">
 <?php
 echo addNavigation();
 ?>
@@ -46,7 +46,7 @@ echo addNavigation();
         <div class="container-detail">
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="card detailImg">
+                    <div class="card detail-img">
                         <img src="<?= $row["image_url"]; ?>" alt="product">
                     </div>
                 </div>

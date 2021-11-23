@@ -3,7 +3,7 @@ body {
     font-size: 100%;
 }
 
-.headerImg {
+.header-img {
     height: 90vh;
     min-height: 500px;
     background-size: cover;
@@ -11,31 +11,31 @@ body {
     background-repeat: no-repeat;
 }
 
-#headerHome {
+#header-home {
     background-image: url('https://cdn.shopify.com/s/files/1/2059/8303/t/23/assets/e07d2c14ad31--MenSection-HeaderLanding-FA21.jpg?v=1629214662');
 }
 
-#headerProducts {
+#header-products {
     background-image: url("https://cdn.shopify.com/s/files/1/2059/8303/t/23/assets/eb0401ed984e--WomenSection-HeaderLanding-FA21.jpg?v=1629215809");
 }
 
-.headerTitle h1 {
+.header-title h1 {
     font-family: Anton, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 8vw;
 }
 
-.imgBody {
+.img-body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#cartImg {
-
+#cart-body {
+    background-image: url(../images/cartSkate.jpg);
 }
 
-#detailImg {
+#detail-body {
     background-image: url(../images/skate.jpg);
 }
 

@@ -37,10 +37,10 @@ if (!$result) {
 <?php
 echo addNavigation();
 ?>
-<header class="headerImg" id="headerHome">
+<header class="header-img" id="header-home">
     <div class="container h-100">
         <div class="row h-100 align-items-end">
-            <div class="col-12 text-center headerTitle">
+            <div class="col-12 text-center header-title">
                 <h1>THINK EMPIRE</h1>
             </div>
         </div>
@@ -61,7 +61,7 @@ echo addNavigation();
                 } else {
                     echo "carousel-item";
                 } ?>">
-                    <div class="imgContainer">
+                    <div class="img-container">
                         <img class="product-image" src="<?= $row["image_url"]; ?>" alt="Product">
                     </div>
                     <div class="card-body text-center">
@@ -70,10 +70,10 @@ echo addNavigation();
                         <h6 class="mb-3">
                             <span class="text-danger mr-1"><?= $row["price"]; ?>$</span>
                         </h6>
-                        <button type="button" class="btn btn-light btn-sm mr-1 mb-2 cartBtn">
+                        <button type="button" class="btn btn-light btn-sm mr-1 mb-2 cart-btn">
                             <i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier
                         </button type="button">
-                        <a class="btn btn-light btn-sm mr-1 mb-2 detailBtn" href="detail.php?id=<?= $row["product_id"] ?>">
+                        <a class="btn btn-light btn-sm mr-1 mb-2 detail-btn" href="detail.php?id=<?= $row["product_id"] ?>">
                             <i class="fas fa-info-circle pr-2"></i>Voir détails
                         </a>
                     </div>

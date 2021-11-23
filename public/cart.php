@@ -22,7 +22,7 @@ include "websiteFormat.php";
     <script type="module" src="scripts/app.js?<?php echo time(); ?>"></script>
 </head>
 
-<body class="imgBody" id="cartImg">
+<body class="img-body" id="cart-body">
 <?php
 echo addNavigation();
 ?>
