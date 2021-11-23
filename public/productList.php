@@ -27,6 +27,7 @@ if (!$result) {
     <link rel="stylesheet" href="stylesheets/style.css?<?php echo time(); ?>"/>
     <link rel="stylesheet" href="stylesheets/content.css?<?php echo time(); ?>"/>
     <link rel="stylesheet" href="stylesheets/card.css?<?php echo time(); ?>"/>
+    <link rel="stylesheet" href="stylesheets/cart.css?<?php echo time(); ?>"/>
     <link rel="stylesheet" href="stylesheets/mobile.css?<?php echo time(); ?>"/>
     <script type="module" src="scripts/app.js?<?php echo time(); ?>"></script>
 </head>
