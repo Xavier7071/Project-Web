@@ -17,7 +17,7 @@
 .product-image {
     border-radius: 50px;
     display: block;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     width: 75%;
     height: 20vw;
 }

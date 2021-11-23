@@ -70,10 +70,10 @@ echo addNavigation();
                             <span class="text-danger mr-1"><?= $row["price"]; ?>$</span>
                         </h6>
                         <button type="button" class="btn btn-light btn-sm mr-1 mb-2 cartBtn">
-                            <i class="fas fa-shopping-cart pr-2"></i>Add to cart
+                            <i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier
                         </button type="button">
                         <a class="btn btn-light btn-sm mr-1 mb-2 detailBtn" href="detail.php?id=<?= $row["product_id"] ?>">
-                            <i class="fas fa-info-circle pr-2"></i>Details
+                            <i class="fas fa-info-circle pr-2"></i>Voir détails
                         </a>
                     </div>
                 </div>
