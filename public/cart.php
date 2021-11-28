@@ -16,25 +16,24 @@ include "websiteFormat.php";
     <link rel="stylesheet" href="stylesheets/footer.css?<?php echo time(); ?>"/>
     <link rel="stylesheet" href="stylesheets/style.css?<?php echo time(); ?>"/>
     <link rel="stylesheet" href="stylesheets/content.css?<?php echo time(); ?>"/>
-    <link rel="stylesheet" href="stylesheets/card.css?<?php echo time(); ?>"/>
     <link rel="stylesheet" href="stylesheets/cart.css?<?php echo time(); ?>"/>
     <link rel="stylesheet" href="stylesheets/mobile.css?<?php echo time(); ?>"/>
     <script type="module" src="scripts/app.js?<?php echo time(); ?>"></script>
+    <script type="module" src="scripts/cart.js?<?php echo time(); ?>"></script>
 </head>
 
-<body class="img-body" id="cart-body">
+<body>
 <?php
 echo addNavigation();
 ?>
 <div class="main">
     <div class="shopping-cart">
-        <div class="cart-row">
+        <div class="row cart-row">
             <span class="cart-item column">Article</span>
             <span class="cart-price column">Prix</span>
             <span class="cart-quantity column">Quantité</span>
-            <span class="cart-subTotal column">Sous-Total</span>
         </div>
-        <div class="items">
+        <div id="items">
         </div>
         <div class="total">
             <strong class="total-title">TPS :</strong>
@@ -44,7 +43,7 @@ echo addNavigation();
             <strong class="total-title">Total :</strong>
             <span class="total-label" id="price">$0</span>
         </div>
-        <button class="btn btn-primary btn-purchase" type="button">Procéder au paiement</button>
+        <button class="btn btn-primary" id="btn-purchase" type="button">Procéder au paiement</button>
     </div>
 </div>
 <?php

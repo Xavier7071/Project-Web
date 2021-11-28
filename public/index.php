@@ -3,14 +3,8 @@
 require "database.php";
 include "websiteFormat.php";
 
-$db = db_connect();
-
 $sql = "SELECT * FROM products JOIN top_products tp on products.product_id = tp.product_id;";
-$result = pg_query($db, $sql);
-if (!$result) {
-    echo pg_last_error($db);
-    exit;
-}
+$result = db_query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +42,7 @@ echo addNavigation();
 </header>
 <div class="main">
     <div class="title"><h2>Nos produits les plus populaires</h2></div>
-    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+    <div id="carouselTopProducts" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <?php
             $nbItems = 1;
@@ -61,35 +55,21 @@ echo addNavigation();
                 } else {
                     echo "carousel-item";
                 } ?>">
-                    <div class="img-container">
-                        <img class="product-image" src="<?= $row["image_url"]; ?>" alt="Product">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5><?= $row["name"]; ?></h5>
-                        <hr>
-                        <h6 class="mb-3">
-                            <span class="text-danger mr-1"><?= $row["price"]; ?>$</span>
-                        </h6>
-                        <button type="button" class="btn btn-light btn-sm mr-1 mb-2 cart-btn">
-                            <i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier
-                        </button type="button">
-                        <a class="btn btn-light btn-sm mr-1 mb-2 detail-btn" href="detail.php?id=<?= $row["product_id"] ?>">
-                            <i class="fas fa-info-circle pr-2"></i>Voir détails
-                        </a>
-                    </div>
+                    <a href="detail.php?id=<?= $row["product_id"] ?>"><img class="d-block w-100"
+                                                                           src="<?= $row["image_url"]; ?>"
+                                                                           alt="Top-Product"></a>
                 </div>
                 <?php
                 $nbItems++;
             }
-            pg_close($db);
             ?>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTopProducts"
                 data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Précédent</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTopProducts"
                 data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Suivant</span>

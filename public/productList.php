@@ -3,14 +3,8 @@
 require "database.php";
 include "websiteFormat.php";
 
-$db = db_connect();
-
 $sql = "SELECT * FROM products;";
-$result = pg_query($db, $sql);
-if (!$result) {
-    echo pg_last_error($db);
-    exit;
-}
+$result = db_query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -61,12 +55,12 @@ echo addNavigation();
                                     <img class="product-image" src="<?= $row["image_url"]; ?>" alt="Product">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5><?= $row["name"]; ?></h5>
+                                    <h5 class="item-name"><?= $row["name"]; ?></h5>
                                     <hr>
                                     <h6 class="mb-3">
                                         <span class="text-danger mr-1"><?= $row["price"]; ?>$</span>
                                     </h6>
-                                    <button type="button" class="btn btn-light btn-sm mr-1 mb-2 cart-btn">
+                                    <button type="button" class="btn btn-light btn-sm mr-1 mb-2 cart-btn" data-name="<?= $row["name"] ?>" data-price="<?= $row["price"] ?>" data-image="<?= $row["image_url"] ?>">
                                         <i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier
                                     </button>
                                     <a type="button" class="btn btn-light btn-sm mr-1 mb-2 detail-btn" href="detail.php?id=<?= $row["product_id"] ?>">
@@ -78,7 +72,6 @@ echo addNavigation();
                     </div>
                     <?php
                 }
-                pg_close($db);
                 ?>
             </div>
         </div>

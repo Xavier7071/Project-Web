@@ -18,3 +18,14 @@ function db_connect()
     }
     return $db;
 }
+
+function db_query($sql) {
+    $db = db_connect();
+    $result = pg_query($db, $sql);
+    if (!$result) {
+        echo pg_last_error($db);
+        exit;
+    }
+    pg_close($db);
+    return $result;
+}

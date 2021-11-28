@@ -1,11 +1,17 @@
-@media screen and (max-width: 768px) {
-    .title h2 {
-        font-size: 20px;
-        line-height: normal;
+@media screen and (max-width: 990px) {
+    .card {
+        text-align: center;
     }
 
-    .card {
-        width: 70%;
+    .container-detail .btn {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .title h2 {
+        line-height: normal;
     }
 
     .carousel {
@@ -22,20 +28,11 @@
 @media screen and (max-width: 480px) {
     .shopping-cart {
         width: 90%;
-        font-size: 15px;
-    }
-
-    .btn-purchase {
-        font-size: 15px;
     }
 }
 
 @media screen and (max-width: 410px) {
     .title {
         width: 65%;
-    }
-
-    .title h2 {
-        font-size: 15px;
     }
 }

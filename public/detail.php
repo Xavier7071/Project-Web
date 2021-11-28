@@ -3,15 +3,9 @@
 require "database.php";
 include "websiteFormat.php";
 
-$db = db_connect();
-
 $id = $_GET['id'];
 $sql = "SELECT * FROM products WHERE product_id = $id";
-$result = pg_query($db, $sql);
-if (!$result) {
-    echo pg_last_error($db);
-    exit;
-}
+$result = db_query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +51,7 @@ echo addNavigation();
                         <h2 class="mt-5">
                             <?= $row["price"]; ?>$
                         </h2>
-                        <button class="btn btn-dark btn-rounded" data-original-title="Ajouter au panier">
+                        <button class="btn btn-dark btn-rounded cart-btn" data-original-title="Ajouter au panier" data-name="<?= $row["name"] ?>" data-price="<?= $row["price"] ?>" data-image="<?= $row["image_url"] ?>">
                             <i class="fa fa-shopping-cart"></i>
                             Ajouter au panier
                         </button>
@@ -67,7 +61,6 @@ echo addNavigation();
         </div>
         <?php
     }
-    pg_close($db);
     ?>
     <?php
     echo addFooter();
