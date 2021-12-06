@@ -1,11 +1,10 @@
 <?php
 
 require "database.php";
-include "websiteFormat.php";
+require "websiteFormat.php";
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM products WHERE product_id = $id";
-$result = db_query($sql);
+$result = db_query("SELECT * FROM products WHERE product_id = $id");
 ?>
 
 <!DOCTYPE html>
@@ -15,17 +14,9 @@ $result = db_query($sql);
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>EMPIRE | Produit</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/nav.css?<?php echo time(); ?>"/>
-    <link rel="stylesheet" href="stylesheets/footer.css?<?php echo time(); ?>"/>
-    <link rel="stylesheet" href="stylesheets/style.css?<?php echo time(); ?>"/>
-    <link rel="stylesheet" href="stylesheets/content.css?<?php echo time(); ?>"/>
-    <link rel="stylesheet" href="stylesheets/card.css?<?php echo time(); ?>"/>
-    <link rel="stylesheet" href="stylesheets/cart.css?<?php echo time(); ?>"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css?<?php echo time(); ?>"/>
-    <script type="module" src="scripts/app.js?<?php echo time(); ?>"></script>
+    <?php
+    echo addLinks();
+    ?>
 </head>
 
 <body class="img-body" id="detail-body">
@@ -51,7 +42,9 @@ echo addNavigation();
                         <h2 class="mt-5">
                             <?= $row["price"]; ?>$
                         </h2>
-                        <button class="btn btn-dark btn-rounded cart-btn" data-original-title="Ajouter au panier" data-name="<?= $row["name"] ?>" data-price="<?= $row["price"] ?>" data-image="<?= $row["image_url"] ?>">
+                        <button class="btn btn-dark btn-rounded cart-btn" data-original-title="Ajouter au panier"
+                                data-name="<?= $row["name"] ?>" data-price="<?= $row["price"] ?>"
+                                data-image="<?= $row["image_url"] ?>">
                             <i class="fa fa-shopping-cart"></i>
                             Ajouter au panier
                         </button>
@@ -61,8 +54,6 @@ echo addNavigation();
         </div>
         <?php
     }
-    ?>
-    <?php
     echo addFooter();
     echo addScripts();
     ?>

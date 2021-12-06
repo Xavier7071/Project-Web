@@ -19,7 +19,8 @@ function db_connect()
     return $db;
 }
 
-function db_query($sql) {
+function db_query($sql)
+{
     $db = db_connect();
     $result = pg_query($db, $sql);
     if (!$result) {
@@ -28,4 +29,25 @@ function db_query($sql) {
     }
     pg_close($db);
     return $result;
+}
+
+function insert_order($userInfos, $total, $cartItems)
+{
+    $db = db_connect();
+    $result = pg_query($db, "INSERT INTO customers (firstname, lastname, email) VALUES ('$userInfos[firstName]', '$userInfos[lastName]', '$userInfos[email]') RETURNING customer_id;");
+    $insertRow = pg_fetch_row($result);
+    $insertedId = $insertRow[0];
+
+    $result = pg_query($db, "INSERT INTO orders (customer_id, country, street, city, zip_code, total) VALUES ($insertedId, '$userInfos[country]', '$userInfos[street]', '$userInfos[city]', '$userInfos[postalCode]', $total) RETURNING order_id;");
+    $insertRow = pg_fetch_row($result);
+    $insertedId = $insertRow[0];
+
+    foreach ($cartItems as $item) {
+        $result = pg_query($db, "SELECT product_id FROM products WHERE name = '$item->name'");
+        $insertRow = pg_fetch_row($result);
+        $productId = $insertRow[0];
+        $productId = (int)$productId;
+        pg_query($db, "INSERT INTO order_items (price, name, quantity, order_id, product_id) VALUES ($item->price, '$item->name', $item->quantity, $insertedId, $productId)");
+    }
+    pg_close($db);
 }

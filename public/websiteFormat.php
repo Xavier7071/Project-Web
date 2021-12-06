@@ -56,8 +56,9 @@ function addFooter()
 
 function addLinks()
 {
-    return '    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
+    return '
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/nav.css"/>
     <link rel="stylesheet" href="stylesheets/footer.css"/>
@@ -65,6 +66,7 @@ function addLinks()
     <link rel="stylesheet" href="stylesheets/content.css"/>
     <link rel="stylesheet" href="stylesheets/card.css"/>
     <link rel="stylesheet" href="stylesheets/cart.css"/>
+    <link rel="stylesheet" href="stylesheets/form.css"/>
     <link rel="stylesheet" href="stylesheets/mobile.css"/>
     <script type="module" src="scripts/app.js"></script>';
 }
@@ -79,4 +81,9 @@ function addScripts()
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>';
+}
+
+function redirect($url)
+{
+    header("Location: " . $url);
 }

@@ -36,6 +36,7 @@ function updateTotal() {
     $("#tps").html(tps + '$');
     $("#tvq").html(tvq + '$');
     $("#price").html(total + '$');
+    localStorage.setItem('total', total);
 }
 
 function goToForm() {

@@ -35,7 +35,11 @@ body {
     background-image: url(../images/skate.jpg);
 }
 
-.container-detail, .shopping-cart {
+#form-body {
+    background-image: url(../images/formSkate.jpg);
+}
+
+.container-detail, .shopping-cart, .formContainer {
     width: 65%;
     max-height: max-content;
     margin: 80px auto;
