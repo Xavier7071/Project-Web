@@ -28,7 +28,7 @@ echo addNavigation();
     while ($row = pg_fetch_assoc($result)) {
         $id = str_pad($row["product_id"], 3, 0, STR_PAD_LEFT);
         ?>
-        <div class="container-detail">
+        <div class="smallContainer">
             <div class="row">
                 <div class="col-lg-5">
                     <div class="card detail-img">

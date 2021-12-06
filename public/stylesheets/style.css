@@ -35,15 +35,20 @@ body {
     background-image: url(../images/skate.jpg);
 }
 
-#form-body {
-    background-image: url(../images/formSkate.jpg);
-}
-
-.container-detail, .shopping-cart, .formContainer {
+.shopping-cart, .smallContainer {
     width: 65%;
     max-height: max-content;
     margin: 80px auto;
     background: #FFFFFF;
     box-shadow: 0 0 10px #000;
     border-radius: 6px;
+}
+
+#confirmContainer {
+    min-height: 240px;
+    padding: 70px 0;
+}
+
+#nextPurchase-btn {
+    margin-bottom: 25px;
 }

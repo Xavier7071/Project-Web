@@ -53,12 +53,12 @@ if (isset($_POST["submit"])) {
     ?>
     <script type="module" src="scripts/form.js"></script>
 </head>
-<body class="img-body" id="form-body">
+<body>
 <?php
 echo addNavigation();
 ?>
 <main>
-    <div class="formContainer text-black">
+    <div class="smallContainer text-black">
         <h2 class="text-center">Informations personnelles</h2>
 
         <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="POST">
